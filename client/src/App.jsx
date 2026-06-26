@@ -16,7 +16,7 @@ export default function App() {
     formData.append("resume", file);
 
     try {
-      const res = await fetch("http://localhost:5006/api/analyze", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/analyze`, {
         method: "POST",
         body: formData,
       });
